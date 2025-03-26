@@ -30,59 +30,27 @@
             <span><input type="submit" value="Importar" id="importar"></span>
         </form>
         <br>
-        <h3>Produtos Importados</h3>
-        <table id="importedData">
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>Código</th>
-                    <th>Nome</th>
-                    <th>Preço</th>
-                    <th>#</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="centered slim"><input type="checkbox" class="checkedToCopy"></td>
-                    <td class="centered">Ab31451</td>
-                    <td>Coca Cola Dois Litros</td>
-                    <td class="rightered">R$ 8,00</td>
-                    <td class="centered"><button class="copyRow">Copiar linha</button></td>
-                </tr>
-                <tr>
-                    <td class="centered slim"><input type="checkbox" class="checkedToCopy"></td>
-                    <td class="centered">Ab31451</td>
-                    <td>Coca Cola Dois Litros</td>
-                    <td class="rightered">R$ 8,00</td>
-                    <td class="centered"><button class="copyRow">Copiar</button></td>
-                </tr>
-                <tr>
-                    <td class="centered slim"><input type="checkbox" class="checkedToCopy"></td>
-                    <td class="centered">Ab31451</td>
-                    <td>Coca Cola Dois Litros</td>
-                    <td class="rightered">R$ 8,00</td>
-                    <td class="centered"><button class="copyRow">Copiar</button></td>
-                </tr>
-                <tr>
-                    <td class="centered slim"><input type="checkbox" class="checkedToCopy"></td>
-                    <td class="centered">Ab31451</td>
-                    <td>Coca Cola Dois Litros</td>
-                    <td class="rightered">R$ 8,00</td>
-                    <td class="centered"><button class="copyRow">Copiar</button></td>
-                </tr>
-                <tr>
-                    <td class="centered slim"><input type="checkbox" class="checkedToCopy"></td>
-                    <td class="centered">Ab31451</td>
-                    <td>Coca Cola Dois Litros</td>
-                    <td class="rightered">R$ 8,00</td>
-                    <td class="centered"><button class="copyRow">Copiar</button></td>
-                </tr>
-            </tbody>
-        </table>
-        <div id="retorno"></div>
-        <div class="copyButton">
-            <button class="copyCheckedToClipboard">Copiar selecionados para área de transferência</button>
+        <div id="importedData">
+            <h3>Produtos Importados</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th><input type='checkbox' class='checkAll'></th>
+                        <th>Código</th>
+                        <th>Nome</th>
+                        <th>Preço</th>
+                        <th>#</th>
+                    </tr>
+                </thead>
+                <tbody id="body-return">
+
+                </tbody>
+            </table>
+            <div class="copyButton">
+                <button class="copyCheckedToClipboard">Copiar selecionados para área de transferência</button>
+            </div>
         </div>
+
     </div>
 </body>
 
