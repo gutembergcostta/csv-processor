@@ -1,0 +1,114 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  color: #333333;
+}
+
+body,
+input,
+table {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 16px;
+}
+
+#container {
+  display: block;
+  width: 1000px;
+  margin: auto;
+}
+
+#container h2 {
+  color: #333333;
+}
+
+form > span {
+  margin: 5px;
+}
+
+form input[type="submit"],
+.csv-style,
+.copyRow,
+.copyCheckedToClipboard {
+  background: #0d6efd;
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+form input[type="submit"] {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  width: 100px;
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover,
+.copyCheckedToClipboard:hover {
+  background: #045ad9;
+}
+
+form input[type="file"] {
+  display: none;
+}
+
+form select {
+  height: 40px;
+  width: 200px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 1;
+  color: #0d6efd;
+}
+.csv-style,
+.copyRow {
+  width: 200px;
+  background-color: white;
+  border: 1px solid #0d6efd;
+  color: #0d6efd;
+}
+.copyRow {
+  width: 100px;
+  height: 30px;
+  padding: 4px;
+}
+.copyCheckedToClipboard {
+  border: none;
+  margin: 20px 10px;
+  height: 40px;
+  font-size: 14px;
+  float: right;
+}
+
+table {
+  margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-radius: 0.5px;
+}
+
+table td {
+  padding: 5px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2; /* Cor de fundo mais clara */
+}
+
+tr:not(:last-child) td {
+  border-bottom: 1px solid #ddd;
+}
+
+.centered {
+  text-align: center;
+}
+
+.rightered {
+  text-align: right;
+}
+
+.slim {
+  width: 50px;
+}
