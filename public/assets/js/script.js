@@ -14,22 +14,64 @@ $(document).ready(function () {
       cache: false,
       processData: false,
       success: function (data) {
-        console.log(data);
-        $("#retorno").html(data);
+        const obj = JSON.parse(data);
+
+        if (obj.success) {
+          $("#importedData").show();
+          $("#body-return").html("");
+          const products = obj.products;
+
+          products.forEach((product) => {
+            let negativePrice = product.negativePrice
+              ? 'class="redBackground"'
+              : "";
+
+            delete product.negativePrice;
+
+            if (product.showCopyButton) {
+              delete product.showCopyButton;
+
+              showCopyButton = `<button class="copyRow" json-product='${JSON.stringify(
+                product
+              )}'>Copiar</button>`;
+            } else {
+              showCopyButton = "";
+            }
+
+            $("#body-return").append(`
+                <tr ${negativePrice}>
+                    <td class="centered slim">${
+                      showCopyButton
+                        ? "<input type='checkbox' class='checkedToCopy'>"
+                        : ""
+                    }</td>
+                    <td class="centered" name="product">${
+                      product["codigo"]
+                    }</td>
+                    <td>${product["nome"]}</td>
+                    <td class="rightered">${product["preco"]}</td>
+                    <td class="centered">${showCopyButton}
+                    </td>
+                </tr>
+            `);
+          });
+        }
       },
     });
   });
 
   $("#csv_file").change(function () {
+    $("#importedData").hide();
     var fileName =
       $(this).prop("files").length > 0
         ? $(this).prop("files")[0].name
         : "Nenhum arquivo selecionado";
     $("#file-name").html(fileName);
   });
-});
 
-function copyToClipboard(product) {
-  navigator.clipboard.writeText(JSON.stringify(product));
-  alert("Copiado para área de transferência!");
-}
+  $(document).on("click", ".copyRow", function () {
+    navigator.clipboard.writeText($(this).attr("data-json-product"));
+
+    alert("Copiado para área de transferência");
+  });
+});
