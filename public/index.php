@@ -16,8 +16,8 @@
 
         <form action="javascript:;" name="form-csv-processor" id="form-csv-processor">
             <span>
-                <label for="csv_file" class="csv-style" id="file-name">Clique aqui para selecionar o CSV</label>
-                <input type="file" name="csv_file" id="csv_file">
+                <label for="file_upload" class="csv-style" id="file-name">Clique aqui para selecionar o CSV</label>
+                <input type="file" name="file_upload" id="file_upload">
             </span>
             <span>
                 <label for="delimiter">Tipo do separador: </label>
