@@ -1,4 +1,21 @@
 $(document).ready(function () {
+  function validationException(message, success = false) {
+    let contextTitle = "Erro!";
+    let contextIcon = "error";
+
+    if (success === true) {
+      contextTitle = "Sucesso!";
+      contextIcon = "success";
+    }
+
+    Swal.fire({
+      title: contextTitle,
+      text: message,
+      icon: contextIcon,
+      confirmButtonText: "Ok",
+    });
+  }
+
   function hasNegativePrice(negativePrice) {
     return negativePrice ? 'class="redBackground"' : "";
   }
@@ -65,7 +82,7 @@ $(document).ready(function () {
           obj.typeException == "InvalidArgumentException" ||
           obj.typeException == "RuntimeException"
         ) {
-          alert(obj.message);
+          validationException(obj.message, "error");
         }
       },
     });
@@ -105,7 +122,7 @@ $(document).ready(function () {
       });
 
       navigator.clipboard.writeText(JSON.stringify(produtos));
-      alert("Copiado para área de transferência");
+      validationException("Copiado para área de transferência", true);
 
       return;
     }
@@ -123,6 +140,6 @@ $(document).ready(function () {
 
     navigator.clipboard.writeText(JSON.stringify(produto));
 
-    alert("Copiado para área de transferência");
+    validationException("Copiado para área de transferência", true);
   });
 });
