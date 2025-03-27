@@ -82,7 +82,7 @@ Para este projeto utilizei uma APIController para gerenciar as chamadas onde nes
 
 O Service tem uma implementação de uma Interface para futuras adaptações que venham a surgir, como por exemplo a importação de um arquivo XML por exemplo.
 
-A parte conveniente a produto, foi separada do Service para melhor organizar as responsabilidades das classes e facilitar a manutabilidade.
+A parte conveniente a produto, foi separada do Service para melhor organizar as responsabilidades das classes e facilitar a manutenabilidade.
 
 Foi criado também a parte de validação separada do service, onde esta tem uma validação específica para o CsvService que herda de uma FileValidator, onde esta útlima pode ser estanciada diretamente ou ser extendida por outra classe que venha a surgir.
 
