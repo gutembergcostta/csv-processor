@@ -50,7 +50,7 @@ Se tudo correr bem a aplicação já deve estar disponível no link [http://loca
 
 Dentro do projeto você encontrará uma pasta com a descrição `planilhas_para_teste`, nela é possível encontrar arquivos com diferentes formatações e excessões para que possam ser usados durante as validações.
 
-### Informações adicionais
+## Informações adicionais
 
 Para este projeto utilizei uma APIController para gerenciar as chamadas onde nesta faz a montagem do Service desejado(no caso o de CSV).
 
