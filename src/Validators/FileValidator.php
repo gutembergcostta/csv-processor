@@ -9,6 +9,19 @@ use RuntimeException;
 class FileValidator
 {
 
+    public function validateExtensionFile(string $fileName, string $filePath, array $allowedExtensions): bool
+    {
+        $this->validateFile($filePath);
+
+        $extension = pathinfo($fileName, PATHINFO_EXTENSION);
+
+        if (!in_array(strtolower($extension), $allowedExtensions)) {
+            throw new InvalidArgumentException("Extensão do arquivo não permitida");
+        }
+
+        return true;
+    }
+
     public function validateFile(string $path): bool
     {
 

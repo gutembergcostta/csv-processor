@@ -20,7 +20,7 @@ class CsvValidator extends FileValidator
 
     public function detectDelimiter(string $path, string $delimiter): bool
     {
-        $this->validateOnlyHeaderFile($path);
+        $this->validateEmptyFile($path);
         $this->validateDelimiter($delimiter);
 
         $handle = fopen($path, 'r');

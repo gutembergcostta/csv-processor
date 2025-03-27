@@ -72,9 +72,11 @@ form select {
 }
 
 .csv-style {
-  width: 280px;
+  width: 350px;
   display: inline-block;
   text-align: center;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .copyRow {

@@ -8,15 +8,17 @@ use Interfaces\FileServiceInterface;
 
 class CsvService implements FileServiceInterface
 {
-    private $csv_file;
+    private $tmp_path;
+    private $file_name;
     private $delimiter;
     private $handle;
     private $validator;
     private $data = array();
 
-    public function __construct(string $csv_file, string $delimiter)
+    public function __construct(string $tmp_path, string $file_name, string $delimiter)
     {
-        $this->csv_file = $csv_file;
+        $this->tmp_path = $tmp_path;
+        $this->file_name = $file_name;
         $this->delimiter = $delimiter;
 
         $this->validator = new CsvValidator();
@@ -31,10 +33,11 @@ class CsvService implements FileServiceInterface
 
     public function processFile(): array
     {
+        $this->validator->validateExtensionFile($this->file_name, $this->tmp_path, array('csv'));
         $this->validator->validateDelimiter($this->delimiter);
-        $this->validator->detectDelimiter($this->csv_file, $this->delimiter);
+        $this->validator->detectDelimiter($this->tmp_path, $this->delimiter);
 
-        $this->handle   = fopen($this->csv_file, 'r');
+        $this->handle   = fopen($this->tmp_path, 'r');
         $header         = fgetcsv($this->handle, 1000, $this->delimiter);
         $columns        = array_flip($header);
         $this->validator->validateColumns($columns);
