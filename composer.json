@@ -1,0 +1,12 @@
+{
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/",
+            "Validators\\": "src/Validators/",
+            "Models\\": "src/Models/",
+            "Services\\": "src/Services/",
+            "Interfaces\\": "src/Interfaces",
+            "Controllers\\": "src/Controllers"
+        }
+    }
+}
