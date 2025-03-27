@@ -41,7 +41,7 @@ Dentro da pasta do projeto execute o seguinte comando em seu Terminal Ubuntu ou 
 > Necessário que tenha o Docker esteja instalado em sua máquina (docker --version)
 
 ```sh
-docker compose up -d --build
+docker compose up -d 
 ```
 
 Se tudo correr bem a aplicação já deve estar disponível no link [http://localhost:8989](http://localhost:8989)
