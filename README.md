@@ -20,9 +20,10 @@ Após isso entre na pasta do repositório:
 cd csv-processor
 ```
 
-Para a execução da aplicação proponho duas opções
+Para a execução da aplicação proponho duas opções.
+**Basta realizar uma para testar o projeto!**
 
-### 1 - Execução do servidor PHP usando o servidor embutido
+### 1 - A primeira - Execução do servidor PHP usando o servidor embutido
 
 > Necessário que tenha o PHP em sua máquina (php --version) para checar
 
@@ -34,7 +35,7 @@ Ao executar este comando no seu prompt a aplicação deve estar disponível no l
 
 Ou você pode usar o Docker para subir um container da aplicação
 
-### 2 - Execução utilizando Docker
+### 2 - A segunda - Execução utilizando Docker
 
 Dentro da pasta do projeto execute o seguinte comando em seu Terminal Ubuntu ou Terminal WSL
 
