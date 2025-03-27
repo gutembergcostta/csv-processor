@@ -30,7 +30,15 @@ cd csv-processor
 php -S localhost:8080 -t public
 ```
 
-Ao executar este comando no seu prompt a aplicação deve estar disponível no link [http://localhost:8080](http://localhost:8080)
+Instalar dependências do Composer e gerar o autoload files
+
+> Necessário que tenha o Composer esteja instalado em sua máquina (composer --version)
+
+```sh
+composer install
+```
+
+Ao executar estes comandos no seu prompt a aplicação deve estar disponível no link [http://localhost:8080](http://localhost:8080)
 
 Ou você pode usar o Docker para subir um container da aplicação
 
@@ -42,6 +50,24 @@ Dentro da pasta do projeto execute o seguinte comando em seu Terminal Ubuntu ou 
 
 ```sh
 docker compose up -d
+```
+
+Instalar dependências do Composer e gerar o autoload files
+
+> Necessário que tenha o Composer esteja instalado em sua máquina (composer --version)
+
+Entrar no container da aplicação
+
+```sh
+docker compose exec app bash
+```
+
+Executar instalação do Composer
+
+```sh
+composer install
+
+exit
 ```
 
 Se tudo correr bem a aplicação já deve estar disponível no link [http://localhost:8989](http://localhost:8989)
