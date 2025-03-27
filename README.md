@@ -20,8 +20,7 @@ Após isso entre na pasta do repositório:
 cd csv-processor
 ```
 
-Para a execução da aplicação proponho duas opções.
-**Basta realizar uma para testar o projeto!**
+## Para a execução da aplicação proponho duas opções. (Basta realizar uma)
 
 ### 1 - A primeira - Execução do servidor PHP usando o servidor embutido
 
